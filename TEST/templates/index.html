@@ -1,0 +1,52 @@
+<!-- TEST/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THBMTTNC - Encryption Final Test</title>
+    <style>
+        body {
+            background: #e8f0fe;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        img.logo {
+            height: 80px;
+            margin: 10px;
+        }
+        h1, h2, h3 {
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 30px;
+            background: #1e88e5;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="../static/images/logoHutech.png" class="logo" alt="HUTECH">
+    <img src="../static/images/logoHutech30Nam.jpg" class="logo" alt="HUTECH 30 Năm">
+
+    <h1>BÀI KIỂM TRA KẾT THÚC MÔN HỌC : THBMTTNC</h1>
+    <h2>ĐẶNG MINH KHA -  - GLHF!</h2>
+
+    <button class="btn" onclick="openForm('caesar')">Caesar Cipher</button>
+    <button class="btn" onclick="openForm('railfence')">Rail Fence Cipher</button>
+    <button class="btn" onclick="openForm('playfair')">Playfair Cipher</button>
+    <button class="btn" onclick="openForm('vigenere')">Vigenère Cipher</button>
+
+    <script>
+        function openForm(cipher) {
+            fetch(`/open_form/${cipher}`);
+        }
+    </script>
+</body>
+</html>
